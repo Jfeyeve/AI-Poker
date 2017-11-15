@@ -81,3 +81,5 @@ local.properties
 *.out
 *.app
 /Debug/
+/Release
+/Test

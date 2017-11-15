@@ -24,6 +24,7 @@ int main() {
 	names.push_back("Dealer");
 	names.push_back("AI");
 	names.push_back("Sam");
+	names.push_back("Ant");
 
 	//Printing from vector using iterator and auto
 /*	for(auto& i:names){
@@ -45,14 +46,9 @@ int main() {
 	 * Test Class starts here
 	 */
 
-	cGames* lNewPokerGame = new cGames(2, 2, 3, 10, 1, 2, &names);
+	cGames* lNewPokerGame = new cGames(2, 2, 3, 50, 1, 2, &names);
 
-	cout<< "Total Games: "<< lNewPokerGame->mNumberOfGames<<endl;
-	cout<< "Total Rounds: "<< lNewPokerGame->mRoundsPerGame<<endl;
-	cout<< "Total Players: "<< lNewPokerGame->mTotalPlayers<<endl;
-	cout<< "Total Chips per player: "<< lNewPokerGame->mChipsPerPlayer<<endl;
-	cout<< "Total Small Blind: "<< lNewPokerGame->mSmallBlind<<endl;
-	cout<< "Total Big Blind: "<< lNewPokerGame->mBigBlind<<endl;
+	lNewPokerGame->DisplayGameParameters();
 
 	cout<< "\nThese are the players: "<< endl;
 	for(auto& i:names){
