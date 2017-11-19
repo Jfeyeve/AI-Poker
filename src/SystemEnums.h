@@ -1,0 +1,52 @@
+/*
+ * SystemEnums.h
+ *
+ *  Created on: Nov 16, 2017
+ *      Author: Jonathan
+ */
+
+#ifndef SYSTEMENUMS_H_
+#define SYSTEMENUMS_H_
+
+	typedef enum GamePhase
+	{
+		PreFlop,
+		Flop,
+		Turn,
+		River
+	}GamePhases;
+
+	typedef enum PlayerPosition
+	{
+		Dealer = 0,
+		SmallBlind,
+		BigBlind,
+		Third,
+		Fourth,
+		Fifth,
+		Sixth,
+		Seventh,
+		Eigth,
+		Nineth
+		}PlayerPositions;
+
+	typedef enum PlayerStyle
+	{
+		//TODO:These styles are placeholders and need to updated to real styles
+		Passive,
+		Aggressive,
+		PassiveAggressive,
+		AI,
+		Random
+	}PlayerStyles;
+
+	typedef enum Bet
+	{
+		Fold,
+		Check,
+		Call,
+		Bet,
+		AllIn
+	}Bets;
+
+#endif /* SYSTEMENUMS_H_ */
