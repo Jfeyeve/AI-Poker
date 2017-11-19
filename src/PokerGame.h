@@ -11,11 +11,11 @@
 #include <vector>
 #include <string>
 
-#include "cPlayer.h"
-#include "cDealer.h"
-#include "cBet.h"
-#include "cRules.h"
-#include "cChip.h"
+#include "Player.h"
+#include "Dealer.h"
+#include "Bet.h"
+#include "Rules.h"
+#include "Chip.h"
 
 
 class cPokerGame {

@@ -5,7 +5,7 @@
  *      Author: Jonathan
  */
 
-#include "cDeck.h"
+#include "Deck.h"
 
 cDeck::cDeck() {
 	// TODO Auto-generated constructor stub

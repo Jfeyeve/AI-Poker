@@ -1,18 +1,18 @@
 /*
- * cPlayerPosition.cpp
+ * cDealer.cpp
  *
  *  Created on: Nov 13, 2017
  *      Author: Jonathan
  */
 
-#include "cPlayerPosition.h"
+#include "Dealer.h"
 
-cPlayerPosition::cPlayerPosition() {
+cDealer::cDealer() {
 	// TODO Auto-generated constructor stub
 
 }
 
-cPlayerPosition::~cPlayerPosition() {
+cDealer::~cDealer() {
 	// TODO Auto-generated destructor stub
 }
 

@@ -12,8 +12,8 @@
 #include <vector>
 
 #include "Card.h"
-#include "cChip.h"
-#include "cPlayerStyle.h"
+#include "Chip.h"
+#include "PlayerStyle.h"
 #include "SystemEnums.h"
 
 class cPlayer {

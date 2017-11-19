@@ -10,12 +10,12 @@
 
 #include <map>
 
-#include "cBet.h"
-#include "cChip.h"
-#include "cLog.h"
-#include "cMoneyManager.h"
-#include "cPlayer.h"
-#include "cRules.h"
+#include "Bet.h"
+#include "Chip.h"
+#include "Log.h"
+#include "MoneyManager.h"
+#include "Player.h"
+#include "Rules.h"
 #include "SystemEnums.h"
 
 class cDealer;

@@ -1,18 +1,18 @@
 /*
- * cPlayerStyle.cpp
+ * cBet.cpp
  *
  *  Created on: Nov 13, 2017
  *      Author: Jonathan
  */
 
-#include "cPlayerStyle.h"
+#include "Bet.h"
 
-cPlayerStyle::cPlayerStyle() {
+cBet::cBet() {
 	// TODO Auto-generated constructor stub
 
 }
 
-cPlayerStyle::~cPlayerStyle() {
+cBet::~cBet() {
 	// TODO Auto-generated destructor stub
 }
 

@@ -5,7 +5,7 @@
  *      Author: Jonathan
  */
 
-#include "cMoneyManager.h"
+#include "MoneyManager.h"
 
 cMoneyManager::cMoneyManager() {
 	// TODO Auto-generated constructor stub

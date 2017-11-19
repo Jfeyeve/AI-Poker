@@ -6,7 +6,7 @@
  */
 
 #include "gtest/gtest.h"
-#include "../src/cGame.h"
+#include "../src/Game.h"
 #include "../src/SystemEnums.h"
 
 class GamesTest : public ::testing::Test

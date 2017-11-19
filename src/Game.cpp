@@ -8,7 +8,7 @@
 #include <string>
 #include <iostream>
 
-#include "cGame.h"
+#include "Game.h"
 
 cGame::cGame(uint32_t aNumberOfGames, uint16_t aRoundsPerGame,
 		uint8_t aTotalPlayers, uint32_t aChipsPerPlayer, uint32_t aSmallBlind,

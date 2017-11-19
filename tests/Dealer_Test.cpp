@@ -8,8 +8,8 @@
 #include "gtest/gtest.h"
 #include "../src/Card.h"
 #include "../src/Dealer.h"
-#include "../src/cGame.h"
-#include "../src/cPlayer.h"
+#include "../src/Game.h"
+#include "../src/Player.h"
 #include "../src/SystemEnums.h"
 
 class DealerTest : public ::testing::Test

@@ -1,18 +1,18 @@
 /*
- * cRules.cpp
+ * cChip.cpp
  *
  *  Created on: Nov 13, 2017
  *      Author: Jonathan
  */
 
-#include "cRules.h"
+#include "Chip.h"
 
-cRules::cRules() {
+cChip::cChip() {
 	// TODO Auto-generated constructor stub
 
 }
 
-cRules::~cRules() {
+cChip::~cChip() {
 	// TODO Auto-generated destructor stub
 }
 

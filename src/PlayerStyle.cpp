@@ -1,18 +1,18 @@
 /*
- * cDealer.cpp
+ * cPlayerStyle.cpp
  *
  *  Created on: Nov 13, 2017
  *      Author: Jonathan
  */
 
-#include "cDealer.h"
+#include "PlayerStyle.h"
 
-cDealer::cDealer() {
+cPlayerStyle::cPlayerStyle() {
 	// TODO Auto-generated constructor stub
 
 }
 
-cDealer::~cDealer() {
+cPlayerStyle::~cPlayerStyle() {
 	// TODO Auto-generated destructor stub
 }
 

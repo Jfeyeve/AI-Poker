@@ -1,18 +1,18 @@
 /*
- * cBet.cpp
+ * cPlayerPosition.cpp
  *
  *  Created on: Nov 13, 2017
  *      Author: Jonathan
  */
 
-#include "cBet.h"
+#include "PlayerPosition.h"
 
-cBet::cBet() {
+cPlayerPosition::cPlayerPosition() {
 	// TODO Auto-generated constructor stub
 
 }
 
-cBet::~cBet() {
+cPlayerPosition::~cPlayerPosition() {
 	// TODO Auto-generated destructor stub
 }
 

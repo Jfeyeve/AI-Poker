@@ -7,7 +7,7 @@
  *      This class will log to game data to a file and also print the data to the console.
  */
 
-#include "cLog.h"
+#include "Log.h"
 
 cLog::cLog() {
 	// TODO Auto-generated constructor stub

@@ -5,7 +5,7 @@
  *      Author: Jonathan
  */
 #include "SystemEnums.h"
-#include "cPlayer.h"
+#include "Player.h"
 
 cPlayer::cPlayer(std::string aName, PlayerStyles aPlayerStyle, uint32_t aChips) {
 	mName = aName;

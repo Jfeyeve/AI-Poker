@@ -10,9 +10,9 @@
 
 #include <vector>
 
-#include "cDeck.h"
-#include "cGame.h"
-#include "cPlayerPosition.h"
+#include "Deck.h"
+#include "Game.h"
+#include "PlayerPosition.h"
 #include "SystemEnums.h"
 
 class cGame;

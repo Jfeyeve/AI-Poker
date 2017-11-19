@@ -9,7 +9,7 @@
 #include <iostream>
 #include <vector>
 
-#include "cGame.h"
+#include "Game.h"
 
 using namespace std;
 

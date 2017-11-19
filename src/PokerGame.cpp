@@ -5,7 +5,7 @@
  *      Author: Jonathan
  */
 
-#include "cPokerGame.h"
+#include "PokerGame.h"
 
 cPokerGame::cPokerGame() {
 	// TODO Auto-generated constructor stub
