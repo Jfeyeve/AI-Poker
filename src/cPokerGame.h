@@ -30,7 +30,7 @@ std::vector<std::string> mActivePlayers;
 cDealer* mDealer;
 cBet* mBet;
 cRules* Rules;
-int mRounds;
+int mRoundsPerGame;
 };
 
 #endif /* CPOKERGAME_H_ */
