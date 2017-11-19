@@ -80,10 +80,8 @@ bool cGame::CreatePlayers(uint8_t aTotalPlayers, std::map<std::string, PlayerSty
 	 */
 	for(it = aPlayerProfiles->begin(); it != aPlayerProfiles->end(); it++)
 	{
-		cPlayer* lPlayer = new cPlayer();
-
-		lPlayer->mName = it->first;
-		lPlayer->mPlayerStyle = it->second;
+		//TODO: Make a Factory for the player creation
+		cPlayer* lPlayer = new cPlayer(it->first, it->second, mChipsPerPlayer);
 
 		aGamePlayers->push_back(lPlayer);
 	}

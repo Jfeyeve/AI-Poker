@@ -30,6 +30,8 @@ public:
 	std::vector<std::string> mTableCards;
 
 	void DealCards();
+	void UpdatePhase();
+	void UpdatePlayerPositions();
 
 };
 

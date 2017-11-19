@@ -27,7 +27,8 @@
 		Sixth,
 		Seventh,
 		Eigth,
-		Nineth
+		Nineth,
+		NotAssigned
 		}PlayerPositions;
 
 	typedef enum PlayerStyle
@@ -40,13 +41,26 @@
 		Random
 	}PlayerStyles;
 
+	typedef enum PlayerName
+	{
+		Sam,
+		Anthony,
+		Jon,
+		Ben,
+		Tom,
+		Yani,
+		Zion,
+		Omar
+	}PlayerNames;
+
 	typedef enum Bet
 	{
 		Fold,
 		Check,
 		Call,
 		Bet,
-		AllIn
+		AllIn,
+		NoBetSelected
 	}Bets;
 
 #endif /* SYSTEMENUMS_H_ */

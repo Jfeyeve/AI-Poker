@@ -43,8 +43,6 @@ private:
 	std::map<std::string, PlayerStyles>* mPlayerProfiles;
 	std::vector<std::string> mActivePlayers;
 
-	cDealer* mDealer;
-	cMoneyManager* mMoneyManager;
 	cRules* mRules;
 	cLog* mLog;
 
