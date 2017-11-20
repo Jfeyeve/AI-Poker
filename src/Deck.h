@@ -24,10 +24,13 @@ public:
 	void River();
 	void Turn();
 
+	cCard getCurrentCard();
+
 	virtual ~cDeck();
 
-private:
 	std::vector<cCard>* mDeckOfCards;
+
+private:
 	uint8_t mCurrentCardPointer;
 };
 

@@ -100,7 +100,9 @@ void cDeck::CreateDeck(std::vector<cCard>* aDeckOfCards)
 
 void cDeck::DrawCard()
 {
-
+	std::vector<cCard>::iterator it;
+	mDeckOfCards->at(mCurrentCardPointer);
+	mCurrentCardPointer++;
 }
 
 void cDeck::Shuffle( cDeck* aDeck )
@@ -126,4 +128,9 @@ void cDeck::River()
 void cDeck::Turn()
 {
 
+}
+
+cCard cDeck::getCurrentCard()
+{
+	return mDeckOfCards->at(mCurrentCardPointer);
 }
