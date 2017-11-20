@@ -52,7 +52,7 @@ bool cGame::StartTheGame()
 	bool lSuccess = false;
 
 	lSuccess = CreatePlayers(mTotalPlayers, mPlayerProfiles, &mGamePlayers);
-	lSuccess = CreateDealer();
+	//lSuccess = CreateDealer();
 	//lSuccess = CreateMoneyManager();
 
 	return lSuccess;

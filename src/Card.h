@@ -10,13 +10,15 @@
 
 #include <string>
 
+#include "SystemEnums.h"
+
 class cCard {
 public:
-	cCard(std::string aSuit, uint8_t aValue);
+	cCard(Suits aSuit, Cards aValue);
 	virtual ~cCard();
 
-	std::string mSuit;
-	uint8_t mValue;
+	Suits mSuit;
+	Cards mValue;
 };
 
 #endif /* CCARD_H_ */

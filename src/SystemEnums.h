@@ -63,4 +63,30 @@
 		NoBetSelected
 	}Bets;
 
+	typedef enum Card
+	{
+		Ace,
+		One,
+		Two,
+		Three,
+		Four,
+		Five,
+		Six,
+		Seven,
+		Eight,
+		Nine,
+		Ten,
+		Jack,
+		Queen,
+		King
+	}Cards;
+
+	typedef enum Suit
+	{
+		Hearts,
+		Diamonds,
+		Clubs,
+		Spades
+	}Suits;
+
 #endif /* SYSTEMENUMS_H_ */

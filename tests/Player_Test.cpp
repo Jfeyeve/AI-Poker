@@ -29,11 +29,15 @@ class PlayerTest : public ::testing::Test
 TEST_F(PlayerTest, receiveCard)
 {
 	bool lActualValue = false;
+	Suits lSuit = Spades;
+	Cards lValue = Jack;
+	Suits lSuit2 = Diamonds;
+	Cards lValue2 = Queen;
 
 	cPlayer* tPlayer1 = new cPlayer("Jon", Aggressive, 200);
 
-	cCard* lCard = new cCard("Spades", 11);
-	cCard* lCard2 = new cCard("Diamonds", 10);
+	cCard* lCard = new cCard(lSuit, lValue);
+	cCard* lCard2 = new cCard(lSuit2, lValue2);
 
 	tPlayer1->receiveCard(*lCard);
 	lActualValue = tPlayer1->receiveCard(*lCard2);

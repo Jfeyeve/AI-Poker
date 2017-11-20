@@ -7,12 +7,11 @@
 
 #include "Card.h"
 
-cCard::cCard(std::string aSuit, uint8_t aValue) {
+cCard::cCard(Suits aSuit, Cards aValue) {
 	mSuit = aSuit;
 	mValue = aValue;
 }
 
 cCard::~cCard() {
-	// TODO Auto-generated destructor stub
 }
 
