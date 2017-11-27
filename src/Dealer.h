@@ -22,16 +22,29 @@ public:
 	cDealer();
 	virtual ~cDealer();
 
-	cDeck mDeck;
+	cDeck* mDeck;
 	cPlayerPosition mPlayerPositionManager;
 
 	std::vector<GamePhases> mGamePhases;
-	std::string mCurrentGamePhase;
-	std::vector<std::string> mTableCards;
+	GamePhases mCurrentGamePhase;
+	std::vector<cCard>* mTableCards;
 
-	void DealCards();
+	uint8_t mFlopCard1;
+	uint8_t mFlopCard2;
+	uint8_t mFlopCard3;
+	uint8_t mRiverCard;
+	uint8_t mTurnCard;
+
 	void UpdatePhase();
 	void UpdatePlayerPositions();
+
+	bool DealToPlayer(cPlayer* aPlayer);
+	void BurnCard();
+	bool DealFlop();
+	bool DealRiver();
+	bool DealTurn();
+
+	std::vector<cCard>* GetTableCards();
 
 };
 

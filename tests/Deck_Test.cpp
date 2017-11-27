@@ -44,8 +44,6 @@ TEST_F(DeckTest, getCurrentCard)
 	cDeck* lDeck = new cDeck();
 	std::vector<cCard> lDeckOfCards;
 
-	lDeck->CreateDeck(lDeck->mDeckOfCards);
-
 	ASSERT_TRUE(lCard.mSuit == lDeck->getCurrentCard().mSuit);
 }
 
@@ -55,10 +53,34 @@ TEST_F(DeckTest, drawCard)
 	cDeck* lDeck = new cDeck();
 	std::vector<cCard> lDeckOfCards;
 
-	lDeck->CreateDeck(lDeck->mDeckOfCards);
 	lDeck->DrawCard();
 
-	ASSERT_TRUE(lCard.mSuit == lDeck->getCurrentCard().mSuit);
+	ASSERT_TRUE(lCard.mSuit == lDeck->getCurrentCard().mSuit ||
+			lCard.mValue == lDeck->getCurrentCard().mValue);
 }
 
+TEST_F(DeckTest, shuffle)
+{
+	bool lSuccess = false;
 
+	cCard lCard(Spades, Two);
+	cDeck* lDeck = new cDeck();
+
+	std::vector<cCard> lDeckOfCards;
+
+	lSuccess = lDeck->Shuffle();
+
+	ASSERT_TRUE(lSuccess == true);
+}
+
+TEST_F(DeckTest, shuffleResetCurrentCardPointer)
+{
+	uint8_t lExpectedCardPointerValue = 0;
+
+	cCard lCard(Spades, Two);
+	cDeck* lDeck = new cDeck();
+
+	lDeck->Shuffle();
+
+	ASSERT_TRUE(lExpectedCardPointerValue == lDeck->getCurrentCardPointer());
+}

@@ -89,4 +89,19 @@
 		Spades
 	}Suits;
 
+	typedef enum NumberOfCardsToDeal
+	{
+		TotalFlopCards = 3,
+		EveryPhaseAfter = 1
+	}TotalCardsToDeal;
+
+	typedef enum PlayerHand
+	{
+		FlopCard1=0,
+		FlopCard2,
+		FlopCard3,
+		TurnCard4,
+		RiverCard5
+	}PlayerHandCardNumber;
+
 #endif /* SYSTEMENUMS_H_ */
