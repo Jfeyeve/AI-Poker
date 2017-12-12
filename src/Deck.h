@@ -16,6 +16,7 @@
 class cDeck {
 public:
 	cDeck();
+	virtual ~cDeck();
 
 	cRNG* mRandomNumberGenerator;
 
@@ -25,8 +26,9 @@ public:
 
 	cCard getCurrentCard();
 	uint8_t getCurrentCardPointer();
+	//Horrible name
+	bool IsCardNotEqual(cCard aCard, cCard aCard2);
 
-	virtual ~cDeck();
 
 
 private:
@@ -38,7 +40,6 @@ private:
 	uint8_t const mIndexOfFirstCardInDeck = 0;
 
 	void SwapACard(std::vector<cCard>* aDeckOfCards);
-	bool CompareCards(cCard aCard, cCard aCard2);
 };
 
 #endif /* CDECK_H_ */

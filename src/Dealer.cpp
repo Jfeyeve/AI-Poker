@@ -20,14 +20,34 @@ cDealer::~cDealer() {
 	delete mDeck;
 }
 
-bool cDealer::DealToPlayer(cPlayer* aPlayer)
+bool cDealer::DealToPlayers(std::vector<cPlayer*> aPlayers)
 {
 	bool lSuccess = false;
 	try{
-		for(int i = 0; i< TotalFlopCards; i++)
+		for(int i = 0; i< TotalPlayerCards; i++)
 		{
-			aPlayer->mCards->push_back(mDeck->DrawCard());
+			for(auto & player : aPlayers) {
+			    DealToPlayer(player);
+			}
 		}
+
+		lSuccess = true;
+	}
+	catch(std::exception& error)
+	{
+		std::cout<< error.what() <<std::endl;
+	}
+
+	return lSuccess;
+}
+
+bool cDealer::DealToPlayer(cPlayer* aPlayer)
+{
+	bool lSuccess = false;
+
+	try{
+
+		aPlayer->mCards->push_back(mDeck->DrawCard());
 
 		lSuccess = true;
 	}

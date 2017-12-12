@@ -91,8 +91,10 @@
 
 	typedef enum NumberOfCardsToDeal
 	{
+		TotalPlayerCards = 2,
 		TotalFlopCards = 3,
-		EveryPhaseAfter = 1
+		EveryPhaseAfter = 1,
+		TotalCardsInAHand = 5
 	}TotalCardsToDeal;
 
 	typedef enum PlayerHand
@@ -103,5 +105,18 @@
 		TurnCard4,
 		RiverCard5
 	}PlayerHandCardNumber;
+
+	typedef enum Actions
+	{
+		KuhnPass = 0,
+		KuhnBet = 1,
+		KuhnTotalActions = 2
+	}KuhnActions;
+
+	typedef enum PokerGameName{
+		Kuhn,
+		RhodeIsland,
+		HoldemLimit
+	}PokerGameType;
 
 #endif /* SYSTEMENUMS_H_ */

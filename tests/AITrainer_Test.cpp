@@ -12,8 +12,9 @@
 #include "../src/Player.h"
 #include "../src/RNG.h"
 #include "../src/SystemEnums.h"
+#include "../src/AITrainer.h"
 
-class RNGTest : public ::testing::Test
+class AITrainerTest : public ::testing::Test
 {
 	protected:
 	virtual void SetUp()
@@ -28,22 +29,24 @@ class RNGTest : public ::testing::Test
 
 };
 
-TEST_F(RNGTest, getRandom)
+TEST_F(AITrainerTest, trainAI)
 {
 	uint8_t lRandomNumber = 52;
 	cRNG randomNumber;
 	uint8_t lrandom = randomNumber.getRandomNumber(lRandomNumber);
 
-	ASSERT_TRUE( lrandom < 52);
+	cAITrainer* lAgent = new cAITrainer(2, Kuhn);
+
+	ASSERT_TRUE(false);
 }
 
-TEST_F(RNGTest, testHighConstraint)
+TEST_F(AITrainerTest, cfrAlgorithm)
 {
 	uint8_t lRandomNumber = 3;
 	cRNG randomNumber;
 	uint8_t lrandom = randomNumber.getRandomNumber(lRandomNumber);
 
-	ASSERT_TRUE( lrandom < 3);
+	ASSERT_TRUE(false);
 }
 
 

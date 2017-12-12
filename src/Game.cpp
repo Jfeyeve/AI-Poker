@@ -116,3 +116,8 @@ bool cGame::CreateMoneyManager()
 
 	return lSuccess;
 }
+
+std::vector<cPlayer*> cGame::getGamePlayers()
+{
+	return mGamePlayers;
+}

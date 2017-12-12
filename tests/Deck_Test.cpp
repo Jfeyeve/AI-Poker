@@ -59,6 +59,16 @@ TEST_F(DeckTest, drawCard)
 			lCard.mValue == lDeck->getCurrentCard().mValue);
 }
 
+TEST_F(DeckTest, compareCard)
+{
+	cCard lCard(Spades, Two);
+	cCard lCard2(Spades, Three);
+	cDeck* lDeck = new cDeck();
+	std::vector<cCard> lDeckOfCards;
+
+	ASSERT_TRUE(lDeck->IsCardNotEqual(lCard,lCard2));
+}
+
 TEST_F(DeckTest, shuffle)
 {
 	bool lSuccess = false;

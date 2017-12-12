@@ -38,7 +38,7 @@ public:
 	void UpdatePhase();
 	void UpdatePlayerPositions();
 
-	bool DealToPlayer(cPlayer* aPlayer);
+	bool DealToPlayers(std::vector<cPlayer*> aPlayers);
 	void BurnCard();
 	bool DealFlop();
 	bool DealRiver();
@@ -46,6 +46,8 @@ public:
 
 	std::vector<cCard>* GetTableCards();
 
+private:
+	bool DealToPlayer(cPlayer* aPlayer);
 };
 
 #endif /* CDEALER_H_ */

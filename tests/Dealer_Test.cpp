@@ -50,32 +50,43 @@ TEST_F(DealerTest, burnCard)
 			lCard2.mValue == Two);
 }
 
-TEST_F(DealerTest, dealToPlayer)
+TEST_F(DealerTest, dealToPlayers)
 {
 	cDealer* lDealer = new cDealer();
+
+	std::vector<cPlayer*> lGamePlayers;
 
 	cCard lExpectedCard1(Spades, Ace);
 	cCard lExpectedCard2(Spades, Two);
 	cCard lExpectedCard3(Spades, Three);
+	cCard lExpectedCard4(Spades, Four);
 
 	Suits lActualSuit1 = Clubs;
 	Cards lActualValue1 = King;
 	Suits lActualSuit2 = Hearts;
 	Cards lActualValue2 = Nine;
 	Suits lActualSuit3 = Hearts;
-	Cards lActualValue3 = Jack;
+	Cards lActualValue3 = Nine;
+	Suits lActualSuit4 = Hearts;
+	Cards lActualValue4 = Nine;
 
 	cPlayer* tPlayer1 = new cPlayer("Jon", Aggressive, 200);
+	cPlayer* tPlayer2 = new cPlayer("Sam", PassiveAggressive, 200);
 
 	cCard* lActualCard1 = new cCard(lActualSuit1, lActualValue1);
 	cCard* lActualCard2 = new cCard(lActualSuit2, lActualValue2);
 	cCard* lActualCard3 = new cCard(lActualSuit3, lActualValue3);
+	cCard* lActualCard4 = new cCard(lActualSuit4, lActualValue4);
 
-	lDealer->DealToPlayer(tPlayer1);
+	lGamePlayers.push_back(tPlayer1);
+	lGamePlayers.push_back(tPlayer2);
+
+	lDealer->DealToPlayers(lGamePlayers);
 
 	lActualCard1 = &tPlayer1->mCards->at(FlopCard1);
-	lActualCard2 = &tPlayer1->mCards->at(FlopCard2);
-	lActualCard3 = &tPlayer1->mCards->at(FlopCard3);
+	lActualCard2 = &tPlayer2->mCards->at(FlopCard1);
+	lActualCard3 = &tPlayer1->mCards->at(FlopCard2);
+	lActualCard4 = &tPlayer2->mCards->at(FlopCard2);
 
 	ASSERT_TRUE(lActualCard1->mSuit == lExpectedCard1.mSuit &&
 				lActualCard1->mValue == lExpectedCard1.mValue);
@@ -85,6 +96,9 @@ TEST_F(DealerTest, dealToPlayer)
 
 	ASSERT_TRUE(lActualCard3->mSuit == lExpectedCard3.mSuit &&
 				lActualCard3->mValue == lExpectedCard3.mValue);
+
+	ASSERT_TRUE(lActualCard4->mSuit == lExpectedCard4.mSuit &&
+				lActualCard4->mValue == lExpectedCard4.mValue);
 }
 
 TEST_F(DealerTest, dealFlop)

@@ -107,17 +107,21 @@ cCard cDeck::DrawCard()
 	return lCardToDraw;
 }
 
+/*
+ * Randomly shuffles a deck of cards
+ */
 bool cDeck::Shuffle()
 {
 	bool lSuccess = false;
+	uint8_t lRandomNumber = 52;
 
 	cCard lCard1( Spades, Ace);
 	cCard lCard2(Diamonds, Two);
 	cCard lCard3(Clubs, Three);
 	cCard lCard4(Hearts, Four);
 
-	uint8_t lIndexToSwapFrom = mRandomNumberGenerator->getRandomNumber();
-	uint8_t lIndexToSwapTo = mRandomNumberGenerator->getRandomNumber();
+	uint8_t lIndexToSwapFrom = mRandomNumberGenerator->getRandomNumber(lRandomNumber);
+	uint8_t lIndexToSwapTo = mRandomNumberGenerator->getRandomNumber(lRandomNumber);
 
 	lCard1 = mDeckOfCards->at(lIndexToSwapFrom);
 	lCard2 = mDeckOfCards->at(lIndexToSwapTo);
@@ -131,8 +135,8 @@ bool cDeck::Shuffle()
 	{
 		SwapACard(mDeckOfCards);
 
-		lSuccess = CompareCards(lCard1,lCard3);
-		lSuccess = CompareCards(lCard1,lCard3);
+		lSuccess = IsCardNotEqual(lCard1,lCard3);
+		lSuccess = IsCardNotEqual(lCard1,lCard3);
 	}
 
 	mCurrentCardPointer = mIndexOfFirstCardInDeck;
@@ -140,20 +144,24 @@ bool cDeck::Shuffle()
 	return lSuccess;
 }
 
+/*
+ * Used to help shuffle cards
+ */
 void cDeck::SwapACard(std::vector<cCard>* aDeckOfCards)
 {
+	uint8_t lRandomNumber = 52;
 	uint8_t lIndexToSwapFrom = 0;
 	uint8_t lIndexToSwapTo = 0;
 
 	for(int i = 0; i<mNumberOfCards; i++){
-		lIndexToSwapFrom = mRandomNumberGenerator->getRandomNumber();
-		lIndexToSwapTo = mRandomNumberGenerator->getRandomNumber();
+		lIndexToSwapFrom = mRandomNumberGenerator->getRandomNumber(lRandomNumber);
+		lIndexToSwapTo = mRandomNumberGenerator->getRandomNumber(lRandomNumber);
 
 		std::swap(aDeckOfCards->at(lIndexToSwapFrom), aDeckOfCards->at(lIndexToSwapTo));
 	}
 }
 
-bool cDeck::CompareCards(cCard aCard, cCard aCard2)
+bool cDeck::IsCardNotEqual(cCard aCard, cCard aCard2)
 {
 	bool lSuccess = false;
 

@@ -35,3 +35,21 @@ TEST_F(GamesTest, StartGame)
 
 	ASSERT_TRUE(lActualValue == true);
 }
+
+TEST_F(GamesTest, getGamePlayers)
+{
+	std::map<std::string, PlayerStyles> lPlayers;
+	lPlayers["Jon"]= Passive;
+	lPlayers["Sam"]= PassiveAggressive;
+
+	cGame* game = new cGame(2, 2, 2, 50, 1, 2, &lPlayers);
+	bool lActualValue = game->StartTheGame();
+
+	std::vector<cPlayer*> lActivePlayers = game->getGamePlayers();
+
+	std::map<std::string, PlayerStyles>::iterator it = lPlayers.begin();
+
+	ASSERT_TRUE(lActivePlayers[0]->mName == it->first);
+	it++;
+	ASSERT_TRUE(lActivePlayers[1]->mName == it->first);
+}

@@ -19,9 +19,7 @@ cRNG::~cRNG() {
 	// TODO Auto-generated destructor stub
 }
 
-uint8_t cRNG::getRandomNumber()
+uint8_t cRNG::getRandomNumber(uint8_t aHigh)
 {
-	uint8_t high = 52;
-
-	return (uint8_t)((rand()% high));
+	return (uint8_t)((rand()% aHigh));
 }

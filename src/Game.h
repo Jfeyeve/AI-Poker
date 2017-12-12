@@ -33,6 +33,8 @@ public:
 	void DisplayGameParameters();
 	bool StartTheGame();
 
+	std::vector<cPlayer*> getGamePlayers();
+
 private:
 	uint32_t mNumberOfGames;
 	uint16_t mRoundsPerGame;
