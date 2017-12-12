@@ -9,6 +9,7 @@
 #define KUHNPOKER_H_
 
 #include "Player.h"
+#include "RNG.h"
 #include "SystemEnums.h"
 
 class KuhnPoker {
@@ -30,11 +31,13 @@ public:
 	//If player one checks then player two can check or bet 1.
 	Bets Player2BetPass();
 	//If player two checks there is a showdown for the pot of 2 (i.e. the higher card wins 1 from the other player).
-	GameWinner Showdown();
+	void Showdown();
 	//If player two bets then player one can fold or call.
 	Bets Player1FoldCall();
 	//If player one bets then player two can fold or call.
 	Bets Player2FoldCall();
+
+	void MakeWinner(int aPlayer);
 
 	void RecordResults();
 
@@ -43,6 +46,14 @@ public:
 
 	int mTotalPot;
 	std::vector<std::string>* mHistoryOfGame;
+
+	cRNG* mRandom = new cRNG();
+	std::vector<int>* mGameCards;
+
+	int mManualPlayerWinCount;
+	int mAIJackWinCount;
+	int mRandomPlayerWinCount;
+	int mTAGPlayerWinCount;
 };
 
 #endif /* KUHNPOKER_H_ */

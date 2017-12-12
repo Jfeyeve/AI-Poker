@@ -40,6 +40,9 @@ public:
 
 	Bets GetBet();
 
+	//REMOVE THIS
+	std::vector<int>* mHand;
+
 private:
 	Bets SelectBet();
 };

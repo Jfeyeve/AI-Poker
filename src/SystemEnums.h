@@ -56,12 +56,12 @@
 
 	typedef enum Bet
 	{
-		Fold,
-		Check,
-		Call,
-		Bet,
-		AllIn,
-		Pass,
+		Fold = 0,
+		Check = 1,
+		Call = 2,
+		Bet = 3,
+		AllIn = 4,
+		Pass = 5,
 		NoBetSelected
 	}Bets;
 

@@ -20,6 +20,9 @@ cPlayer::cPlayer(std::string aName, PlayerStyles aPlayerStyle, uint32_t aChips) 
 
 	//Empty hand of cards until the game starts
 	mCards = new std::vector<cCard>();
+
+	//Remove this
+	mHand = new std::vector<int>;
 }
 
 cPlayer::~cPlayer() {
