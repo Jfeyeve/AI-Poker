@@ -90,22 +90,35 @@ int main() {
 
 			lKuhnGame->Showdown();
 		}
+
+		Bets lPlayer2DecisionRound2 = Pass;
+
+		//If player one bets then player two can fold or call.
+		if( lPlayer1DecisionRound2 == Bet)
+		{
+			std::cout << "PLAYER TWO, FOLD OR CALL"<< std::endl;
+			lPlayer2DecisionRound2 = lKuhnGame->Player2FoldCall();
+		}
+
+		//If player two folds then player one takes the pot of 3 (i.e. winning 1 from player 2).
+		if( lPlayer2DecisionRound2 == Fold)
+		{
+			std::cout << "PLAYER TWO FOLDS!!!!"<< std::endl;
+			lKuhnGame->MakeWinner(1);
+		}
+
+		//If player two calls there is a showdown for the pot of 4 (i.e. the higher card wins 2 from the other player).
+		if( lPlayer2DecisionRound2 == Call)
+		{
+			std::cout << "IN THE SHOWDOWN"<< std::endl;
+
+			lKuhnGame->Showdown();
+		}
 	}
 
 	std::cout << "After "<< lRoundsToPlay << " rounds"<< std::endl;
 	std::cout << "Player 1 won: "<< lKuhnGame->mPlayer1Wins << " rounds"<< std::endl;
 	std::cout << "Player 2 won: "<< lKuhnGame->mPlayer2Wins << " rounds"<< std::endl;
-
-
-
-
-	//If player one bets then player two can fold or call.
-
-	//If player two folds then player one takes the pot of 3 (i.e. winning 1 from player 2).
-
-	//If player two calls there is a showdown for the pot of 4 (i.e. the higher card wins 2 from the other player).
-
-
 
 	return 0;
 }
