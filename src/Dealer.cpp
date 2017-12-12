@@ -20,11 +20,11 @@ cDealer::~cDealer() {
 	delete mDeck;
 }
 
-bool cDealer::DealToPlayers(std::vector<cPlayer*> aPlayers)
+bool cDealer::DealToPlayers(std::vector<cPlayer*> aPlayers, int aCardsPerPlayer)
 {
 	bool lSuccess = false;
 	try{
-		for(int i = 0; i< TotalPlayerCards; i++)
+		for(int i = 0; i< aCardsPerPlayer; i++)
 		{
 			for(auto & player : aPlayers) {
 			    DealToPlayer(player);

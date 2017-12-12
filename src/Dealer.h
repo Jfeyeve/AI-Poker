@@ -38,7 +38,7 @@ public:
 	void UpdatePhase();
 	void UpdatePlayerPositions();
 
-	bool DealToPlayers(std::vector<cPlayer*> aPlayers);
+	bool DealToPlayers(std::vector<cPlayer*> aPlayers, int aCardsPerPlayer);
 	void BurnCard();
 	bool DealFlop();
 	bool DealRiver();

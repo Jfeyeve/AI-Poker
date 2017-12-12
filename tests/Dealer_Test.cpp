@@ -81,7 +81,7 @@ TEST_F(DealerTest, dealToPlayers)
 	lGamePlayers.push_back(tPlayer1);
 	lGamePlayers.push_back(tPlayer2);
 
-	lDealer->DealToPlayers(lGamePlayers);
+	lDealer->DealToPlayers(lGamePlayers, 2);
 
 	lActualCard1 = &tPlayer1->mCards->at(FlopCard1);
 	lActualCard2 = &tPlayer2->mCards->at(FlopCard1);

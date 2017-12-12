@@ -36,9 +36,10 @@
 		//TODO:These styles are placeholders and need to updated to real styles
 		Passive,
 		Aggressive,
-		PassiveAggressive,
-		AI,
-		Random
+		PassiveAggressive = 4,
+		AI = 2,
+		Random = 3,
+		Manual = 1,
 	}PlayerStyles;
 
 	typedef enum PlayerName
@@ -60,6 +61,7 @@
 		Call,
 		Bet,
 		AllIn,
+		Pass,
 		NoBetSelected
 	}Bets;
 
@@ -118,5 +120,12 @@
 		RhodeIsland,
 		HoldemLimit
 	}PokerGameType;
+
+	typedef enum Winner{
+		ManualPlayer,
+		AIJack,
+		RandomPlayer,
+		TAGPlayer
+	}GameWinner;
 
 #endif /* SYSTEMENUMS_H_ */
