@@ -49,6 +49,8 @@ public:
 
 	cRNG* mRandom = new cRNG();
 	std::vector<int>* mGameCards;
+	std::vector<int>* mBetOrPass;
+	std::vector<int>* mFoldOrCall;
 
 	int mManualPlayerWinCount;
 	int mAIJackWinCount;
